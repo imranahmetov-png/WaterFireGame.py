@@ -208,7 +208,7 @@ def game_over(text):
                 sys.exit()
             # Рестарт игры
             if event.type == pygame.KEYDOWN and event.key == pygame.K_r:
-                reset()
+                reset_game()
                 return
         # Обновление экрана
         pygame.display.update()
@@ -267,10 +267,6 @@ def win():
             sys.exit()
 
         pygame.display.flip()
-# РЕСТАРТ ИГРЫ
-def reset():
-    fire.rect.topleft = (100, 340)
-    water_player.rect.topleft = (600, 340)
 
 # ЗАПУСК И ПЕРЕЗАПУСК ИГРЫ
 reset_game()
